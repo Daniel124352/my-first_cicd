@@ -6,7 +6,9 @@ on:
     types:
       - completed                   # Uruchom po zakończeniu workflow
     branches: [main]
-
+permissions:
+  contents: read
+  packages: write
 jobs:
   docker:
     runs-on: ubuntu-latest
