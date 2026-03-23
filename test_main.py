@@ -4,9 +4,9 @@ from main import app
 client = TestClient(app)
 
 def test_hello():
-    response = client.get("/")
+    response = client.get("/sfe")
     assert response.status_code == 200
-    assert respognse.json() == {"message": "Hello World"}
+    assert response.json() == {"message": "Hello World"}
 
 def test_add_positive_numbers():
     response = client.get("/add/2/3")
